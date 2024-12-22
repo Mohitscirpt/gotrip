@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffffff;
+    }
+
+    .form-container {
+      width: 400px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .tab {
+      padding: 15px;
+      cursor: pointer;
+      text-align: center;
+      flex: 1;
+    }
+
+    .tab.active {
+      font-weight: bold;
+      color: #007BFF;
+      border-bottom: 3px solid #007BFF;
+    }
+
+    .form {
+      padding: 20px;
+    }
+
+    .form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .form button:hover {
+      background-color: #0056b3;
+    }
+    /* General Navbar Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background */
+  }
+  
+  .navbar {
+    background-color: #00254f; /* Deep blue background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  /* Navigation Links Styling */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Space between links */
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #007bff; /* Blue highlight */
+    border-radius: 5px;
+  }
+  
+  /* Button Styling */
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .find-bookings {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .find-bookings:hover {
+    background-color: #0056b3;
+    color: white;
+    border: 1px solid #0056b3;
+  }
+  
+  .sign-in {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .sign-in:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide links on small screens */
+    }
+  
+    .navbar {
+      flex-wrap: wrap;
+    }
+  
+    .nav-buttons {
+      margin-top: 10px;
+    }
+  }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">GoTrip.in</div>
+        <ul class="nav-links">
+          <li><a href="/templetes/home.html">Home</a></li>
+          <li><a href="/templetes/Packages.html">Packages</a></li>
+          <li><a href="/templetes/Bookings.html">Bookings</a></li>
+          <!-- <li><a href="/templetes/profile.html">Profile</a></li> -->
+          <li><a href="/templetes/Review.html">Reviews</a></li>
+          <li><a href="/templetes/Live.html">Live Support</a></li>
+          <!-- <li><a href="/templetes/about.html">About Us</a></li>
+          <li><a href="/templetes/contact.html">Contact</a></li> -->
+        </ul>
+        <div class="nav-buttons">
+          <!-- <a href="#" class="btn find-bookings">Find Bookings</a> -->
+          <a href="/templetes/login.html" class="btn sign-in">Sign in / Register</a>
+        </div>
+    </nav>
+ </header>
+  <div class="container">
+    <div class="form-container">
+      <div class="tabs">
+        <div class="tab active" id="login-tab">Login</div>
+        <div class="tab" id="register-tab">Register</div>
+      </div>
+      <div class="form" id="login-form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Email or Username" id="login-username" />
+        <input type="password" placeholder="Password" id="login-password" />
+        <button onclick="login()">Login</button>
+      </div>
+      <div class="form" id="register-form" style="display: none;">
+        <h2>Register</h2>
+        <input type="text" placeholder="Email" id="register-email" />
+        <input type="password" placeholder="Password" id="register-password" />
+        <input type="password" placeholder="Confirm Password" id="confirm-password" />
+        <button onclick="register()">Register</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loginTab = document.getElementById('login-tab');
+    const registerTab = document.getElementById('register-tab');
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    loginTab.addEventListener('click', () => {
+      loginTab.classList.add('active');
+      registerTab.classList.remove('active');
+      loginForm.style.display = 'block';
+      registerForm.style.display = 'none';
+    });
+
+    registerTab.addEventListener('click', () => {
+      registerTab.classList.add('active');
+      loginTab.classList.remove('active');
+      registerForm.style.display = 'block';
+      loginForm.style.display = 'none';
+    });
+
+    function login() {
+      const username = document.getElementById('login-username').value;
+      const password = document.getElementById('login-password').value;
+      alert(`Login Attempt: Username=${username}, Password=${password}`);
+    }
+
+    function register() {
+      const email = document.getElementById('register-email').value;
+      const password = document.getElementById('register-password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      alert(`Registration Successful: Email=${email}`);
+    }
+  </script>
+</body>
+</html>
