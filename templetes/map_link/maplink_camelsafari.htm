@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/maps?&mepi=107~Local~MiddleOfPage~Entity_Vertical_List_Card&ty=17&q=sum%20sand%20jaisalmer&segment=Local&ppois=26.911239624023438_70.91431427001953_Sam%20Sand%20Dunes%20Desert%20Safari%20Camp_YN4070x9284696133864067820~26.909584045410156_70.91133880615234_Jaisalmer%20Desert%20Safari_YN4070x17460638187837360188~26.912235260009766_70.91096496582031_Jaisalmer%20Dekho%20Desert%20Camps%20Sam_YN4070x558926556671436499~26.91567039489746_70.89124298095703_Maharaja%20Desert%20Camp%20Jaisalmer_YN4070x18168928648688063009~&sei=0&cp=26.91124~70.914314&child=%26ty%3D18%26q%3DSam%2520Sand%2520Dunes%2520Desert%2520Safari%2520Camp%26ss%3Dypid.YN4070x9284696133864067820%26segment%3DLocal%26ppois%3D26.911239624023438_70.91431427001953_Sam%2520Sand%2520Dunes%2520Desert%2520Safari%2520Camp_YN4070x9284696133864067820~%26cp%3D26.91124~70.914314%26EnableMapViewChange%3Dtrue&FORM=MPSRPL";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=35dec1f9a67abed913a1e04add72485f179e904d67c8bfb77ba859a9751437efJmltdHM9MTczNDgyNTYwMA&ptn=3&ver=2&hsh=4&fclid=26a1114c-acb0-6f87-31cf-00a3ad2b6e1f&u=a1L21hcHM_Jm1lcGk9MTA3fkxvY2Fsfk1pZGRsZU9mUGFnZX5FbnRpdHlfVmVydGljYWxfTGlzdF9DYXJkJnR5PTE3JnE9c3VtJTIwc2FuZCUyMGphaXNhbG1lciZzZWdtZW50PUxvY2FsJnBwb2lzPTI2LjkxMTIzOTYyNDAyMzQzOF83MC45MTQzMTQyNzAwMTk1M19TYW0lMjBTYW5kJTIwRHVuZXMlMjBEZXNlcnQlMjBTYWZhcmklMjBDYW1wX1lONDA3MHg5Mjg0Njk2MTMzODY0MDY3ODIwfjI2LjkwOTU4NDA0NTQxMDE1Nl83MC45MTEzMzg4MDYxNTIzNF9KYWlzYWxtZXIlMjBEZXNlcnQlMjBTYWZhcmlfWU40MDcweDE3NDYwNjM4MTg3ODM3MzYwMTg4fjI2LjkxMjIzNTI2MDAwOTc2Nl83MC45MTA5NjQ5NjU4MjAzMV9KYWlzYWxtZXIlMjBEZWtobyUyMERlc2VydCUyMENhbXBzJTIwU2FtX1lONDA3MHg1NTg5MjY1NTY2NzE0MzY0OTl-MjYuOTE1NjcwMzk0ODk3NDZfNzAuODkxMjQyOTgwOTU3MDNfTWFoYXJhamElMjBEZXNlcnQlMjBDYW1wJTIwSmFpc2FsbWVyX1lONDA3MHgxODE2ODkyODY0ODY4ODA2MzAwOX4mc2VpPTAmY3A9MjYuOTExMjR-NzAuOTE0MzE0JmNoaWxkPSUyNnR5JTNEMTglMjZxJTNEU2FtJTI1MjBTYW5kJTI1MjBEdW5lcyUyNTIwRGVzZXJ0JTI1MjBTYWZhcmklMjUyMENhbXAlMjZzcyUzRHlwaWQuWU40MDcweDkyODQ2OTYxMzM4NjQwNjc4MjAlMjZzZWdtZW50JTNETG9jYWwlMjZwcG9pcyUzRDI2LjkxMTIzOTYyNDAyMzQzOF83MC45MTQzMTQyNzAwMTk1M19TYW0lMjUyMFNhbmQlMjUyMER1bmVzJTI1MjBEZXNlcnQlMjUyMFNhZmFyaSUyNTIwQ2FtcF9ZTjQwNzB4OTI4NDY5NjEzMzg2NDA2NzgyMH4lMjZjcCUzRDI2LjkxMTI0fjcwLjkxNDMxNCUyNkVuYWJsZU1hcFZpZXdDaGFuZ2UlM0R0cnVlJkZPUk09TVBTUlBM&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/maps?&mepi=101~~Unknown~Address_Link&ty=18&q=Statue%20Of%20Unity&ss=ypid.YN4070x4835071149559742320&ppois=21.837779998779297_73.71888732910156_Statue%20Of%20Unity_YN4070x4835071149559742320~&cp=21.83778~73.718887&v=2&sV=1&FORM=MPSRPL";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=f03b5ec6ce489c4470dbeac9ba67151d0e6d47884de48f94fc5b2ef46652a8e6JmltdHM9MTczNDgyNTYwMA&ptn=3&ver=2&hsh=4&fclid=26a1114c-acb0-6f87-31cf-00a3ad2b6e1f&u=a1L21hcHM_Jm1lcGk9MTAxfn5Vbmtub3dufkFkZHJlc3NfTGluayZ0eT0xOCZxPVN0YXR1ZSUyME9mJTIwVW5pdHkmc3M9eXBpZC5ZTjQwNzB4NDgzNTA3MTE0OTU1OTc0MjMyMCZwcG9pcz0yMS44Mzc3Nzk5OTg3NzkyOTdfNzMuNzE4ODg3MzI5MTAxNTZfU3RhdHVlJTIwT2YlMjBVbml0eV9ZTjQwNzB4NDgzNTA3MTE0OTU1OTc0MjMyMH4mY3A9MjEuODM3Nzh-NzMuNzE4ODg3JnY9MiZzVj0xJkZPUk09TVBTUlBM&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>

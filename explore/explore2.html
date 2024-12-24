@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>GoTrip Navigation Bar</title>
+  <style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #00254f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10; /* Ensure navbar stays on top */
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    select, input[type="date"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .trip-type {
+      margin-top: 10px;
+    }
+
+    .trip-type label {
+      margin-right: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .package-details {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f0f0f0;
+      border-radius: 10px;
+    }
+
+    .package-section {
+      margin-bottom: 20px;
+    }
+
+    .package-section h3 {
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin: 20px 0;
+}
+
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.package-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+.package-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.package-description {
+    font-size: 1rem;
+    margin: 0 15px 5px;
+    color: #666;
+}
+
+.package-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 5px 15px 15px;
+    color: #0073e6;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GoTrip.in</div>
+            <ul class="nav-links">
+              <li><a href="/templetes/home.html">Home</a></li>
+              <li><a href="/templetes/Packages.html">Packages</a></li>
+              <li><a href="/templetes/Bookings.html">Bookings</a></li>
+              <!-- <li><a href="/templetes/profile.html">Profile</a></li> -->
+              <li><a href="/templetes/Review.html">Reviews</a></li>
+              <li><a href="/templetes/Live.html">Live Support</a></li>
+              <!-- <li><a href="/templetes/about.html">About Us</a></li>
+              <li><a href="/templetes/contact.html">Contact</a></li> -->
+            </ul>
+            <div class="nav-buttons">
+              <!-- <a href="#" class="btn find-bookings">Find Bookings</a> -->
+              <a href="/templetes/login.html" class="btn sign-in">Sign in / Register</a>
+            </div>
+        </nav>
+     </header>
+     <header>
+      <h1 class="title">Adventurous Mountain Packages</h1>
+  </header>
+  <section class="packages">
+      <div class="package-card">
+          <img src="mt1.jpeg" alt="Goa" class="package-image">
+          <h2 class="package-title">Adventure awaits in Leh Ladakh</h2>
+          <p class="package-description">Stark landscapes, Buddhist monasteries and High altitude treks.</p>
+          <p class="package-price">Price: $7,400 per person</p>
+          <!-- <button class="btn">Explore Now</button> -->
+           
+           <a href="/details/mt_details1.html" class="btn">Explore Now</a>
+      </div>
+      <div class="package-card">
+          <img src="mt2.jpeg" alt="Goa" class="package-image">
+          <h2 class="package-title">Mt. Everest: Conquer the Crown Jewel</h2>
+          <p class="package-description">EBC trekking, Unmatched altitude and Viewpoints!</p>
+          <p class="package-price">Price: $48,000 per person</p>
+          <a href="/details/mt_details2.html" class="btn">Explore Now</a>
+
+          
+      </div>
+      <div class="package-card">
+          <img src="mt3.jpeg" alt="Bora Bora" class="package-image">
+          <h2 class="package-title">Himalayas: Abode of snow</h2>
+          <p class="package-description">Mountaineering, trekking,rafting and paragliding.</p>
+          <p class="package-price">Price: $3,200 per person</p>
+          <a href="/details/mt_details3.html" class="btn">Explore Now</a>
+
+      </div>
+      <div class="package-card">
+        <img src="mt4.jpeg" alt="Bora Bora" class="package-image">
+        <h2 class="package-title">Kedarnath: Spiritual Mountain Adventures</h2>
+        <p class="package-description">Combination of adventure, spirituality and natural beauty.</p>
+        <p class="package-price">Price: $8,000 per person</p>
+        <a href="/details/mt_details4.html" class="btn">Explore Now</a>
+
+    </div>
+    <div class="package-card">
+      <img src="mt5.jpeg" alt="Bora Bora" class="package-image">
+      <h2 class="package-title">Swiss Alps: Dramatic mountains</h2>
+      <p class="package-description">Tranquil valleys, picturesque villages and stunning glaciers.</p>
+      <p class="package-price">Price: $15,500 per person</p>
+      <a href="/details/mt_details5.html" class="btn">Explore Now</a>
+
+  </div>
+  <div class="package-card">
+    <img src="mt6.jpeg" alt="Bora Bora" class="package-image">
+    <h2 class="package-title">Annapurna Base Camp Trekking</h2>
+    <p class="package-description">Take the Trek of a Lifetime here!</p>
+    <p class="package-price">Price: $11,500 per person</p>
+    <a href="/details/mt_details6.html" class="btn">Explore Now</a>
+
+</div>
+<div class="package-card">
+  <img src="mt7.jpeg" alt="Bora Bora" class="package-image">
+  <h2 class="package-title">Nainital: Explore the Enchanting Hills!</h2>
+  <p class="package-description">Serene lakes, panoramic views of surrounding mountains</p>
+  <p class="package-price">Price: $7,500 per person</p>
+  <a href="/details/mt_details7.html" class="btn">Explore Now</a>
+
+</div>
+<div class="package-card">
+  <img src="mt8.jpeg" alt="Bora Bora" class="package-image">
+  <h2 class="package-title">Mt. Fuji: Conquer Japan's Iconic Peak
+  </h2>
+  <p class="package-description"> Goraiko Sunrise from Summit and guided trek! </p>
+  <p class="package-price">Price: $10,000 per person</p>
+  <a href="/details/mt_details8.html" class="btn">Explore Now</a>
+
+</div>
+<div class="package-card">
+  <img src="mt9.jpeg" alt="Bora Bora" class="package-image">
+  <h2 class="package-title">Kanchenjunga: Third highest mountain!</h2>
+  <p class="package-description">Well planned itenaries, once-in-a-lifetime experience.</p>
+  <p class="package-price">Price: $8,200 per person</p>
+  <a href="/details/mt_details9.html" class="btn">Explore Now</a>
+
+</div>
+      <!-- Add more cards as needed -->
+  </section>
+    </body>
+    </html>

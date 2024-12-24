@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoTrip Navigation Bar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .navbar {
+      background-color: #00254f;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      background-color: #007bff;
+      border-radius: 5px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .hotel-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      color: #333;
+    }
+
+    .hotel-header h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .hotel-header p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .map-link {
+      color: #0073e6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .map-link:hover {
+      text-decoration: underline;
+    }
+
+    .hotel-details p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .hotel-image img{
+      max-width: ;
+      max-height:100px;
+      margin-left: 3px;
+      margin-bottom: 8px;
+      display: flex-row;
+      object-fit: cover;
+      animation: forwards;
+      box-shadow:0 0 2px 2px #00254f;
+      cursor:hover;
+      
+
+    }
+
+    .hotel-highlights h3 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .hotel
+
+    .highlight-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .highlight-icons div {
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .hotel-facilities h3 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .hotel-facilities ul {
+      list-style:none;
+      padding: 0;
+      margin: 0;
+      display:grid;
+      grid-template-columns: repeat(2, 2fr);
+      gap: 10px;
+    }
+
+    .hotel-facilities li {
+      
+      font-size: 0.9rem;
+      padding: 5px;
+      background-color: #f8f9fa;
+      border: 1px solid #7dbbee;
+      border-radius: 5px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hotel-facilities li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .package-cta {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005bb5;
+    }
+
+    .map-container {
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow:hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GoTrip.in</div>
+            <ul class="nav-links">
+              <li><a href="/templetes/home.html">Home</a></li>
+              <li><a href="/templetes/Packages.html">Packages</a></li>
+              <li><a href="/templetes/Bookings.html">Bookings</a></li>
+              <li><a href="/templetes/Review.html">Reviews</a></li>
+              <li><a href="/templetes/Live.html">Live Support</a></li>
+            </ul>
+            <div class="nav-buttons">
+              <a href="/templetes/login.html" class="btn sign-in">Sign in / Register</a>
+            </div>
+        </nav>
+     </header>
+     <div class="hotel-card">
+        <div class="hotel-header">
+            <h2>Casa Dina </h2>
+            <p>658 Chem. de Campagne, 30250 Sommières, France
+              <a href="#" class="map-link"></a></p>
+        </div>
+
+        <div class="hotel-details">
+            <p>Our property of 1 acre is located on the heights of Sommières between the Mediterranean and the Cévennes, we propose at CASA DINA:
+
+                2 villas with private hot tubs : villa RIVIERA and villa CUBIC
+                
+                1 lodge with a large wooden terrace : the Céladon Suite
+                
+                1 large studio : the STUDIO Casa Dina
+                
+                You can also enjoy our restaurant
+
+
+            </p>
+        </div>
+
+        <div class="hotel-image">
+            <img src="inimg6.1.jpeg" alt="mt">
+
+          <img src="inimg6.2.jpeg" alt="mt">
+          <img src="inimg6.3.jpeg" alt="mt2">
+        </div>
+
+        <div class="hotel-highlights">
+            <h3>Highlights</h3>
+            <div class="highlight-icons">
+                <div><span>🏰</span> Located in a charming French countryside village</div>
+                <div><span>🍷</span> Proximity to renowned vineyards and wine tours</div>
+                <div><span>🌳</span> Surrounded by scenic gardens and serene landscapes</div>
+                <div><span>🎨</span> Authentic Provençal architecture and decor</div>
+                <div><span>🚴</span> Easy access to cycling and hiking trails</div>
+                <div><span>🍴</span> Fine dining with locally sourced ingredients</div>
+            
+
+            </div>
+        </div>
+
+        <div class="hotel-facilities">
+            <h3>Facilities</h3>
+            <ul>
+                <li>Elegant boutique rooms</li>
+                <li>Wine cellar tours and tastings</li>
+                <li>Outdoor pool with sun loungers</li>
+                <li>Traditional French cooking classes</li>
+                <li>On-site spa with massages</li>
+                <li>Shuttle services to nearby attractions</li>            </ul>
+        </div>
+        <div class="map-container">
+
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.4090875215607!2d4.0750514!3d43.7851237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b421e4a27c0c57%3A0xb847c4a3449725ad!2sCasa%20Dina%20Sommi%C3%A8res!5e0!3m2!1sen!2sin!4v1734906163709!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="package-cta">
+          <a href="/templetes/Packages.html" class="btn">Apply for Package
+
+</a>

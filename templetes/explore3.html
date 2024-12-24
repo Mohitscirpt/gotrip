@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Explore_Road_Trip_Paradise</title>
+  <style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #00254f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10; /* Ensure navbar stays on top */
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    select, input[type="date"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .trip-type {
+      margin-top: 10px;
+    }
+
+    .trip-type label {
+      margin-right: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .package-details {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f0f0f0;
+      border-radius: 10px;
+    }
+
+    .package-section {
+      margin-bottom: 20px;
+    }
+
+    .package-section h3 {
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin: 20px 0;
+}
+
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.package-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+.package-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.package-description {
+    font-size: 1rem;
+    margin: 0 15px 5px;
+    color: #666;
+}
+
+.package-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 5px 15px 15px;
+    color: #0073e6;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GoTrip.in</div>
+            <ul class="nav-links">
+              <li><a href="/templetes/home.html">Home</a></li>
+              <li><a href="/templetes/Packages.html">Packages</a></li>
+              <li><a href="/templetes/Bookings.html">Bookings</a></li>
+              <!-- <li><a href="/templetes/profile.html">Profile</a></li> -->
+              <li><a href="/templetes/Review.html">Reviews</a></li>
+              <li><a href="/templetes/Live.html">Live Support</a></li>
+              <!-- <li><a href="/templetes/about.html">About Us</a></li>
+              <li><a href="/templetes/contact.html">Contact</a></li> -->
+            </ul>
+            <div class="nav-buttons">
+              <!-- <a href="#" class="btn find-bookings">Find Bookings</a> -->
+              <a href="/templetes/login.html" class="btn sign-in">Sign in / Register</a>
+            </div>
+        </nav>
+     </header>
+     <header>
+      <h1 class="title">Explore Road Trip Paradise Packages</h1>
+  </header>
+  <section class="packages">
+      <div class="package-card">
+          <img src="../images/India’s Golden Triangle.jpeg" alt="India’s Golden Triangle" class="package-image">
+          <h2 class="package-title">India's Golden Triangle</h2>
+          <p class="package-description">The loop from Delhi to Agra and Jaipur packs a lot of wonders into a few days of driving. Your adventure begins in Delhi, where the ruins of eight cities tell the story of India’s great Islamic empires.</p>
+          <p class="package-price">Price: $5,500 per person</p>
+          <!-- <button class="btn"> <a href="/templetes/Packages.html"></a>Explore Now</button> -->
+           
+          <a href="../templetes/details_roadtrip/details_indiagoldentrianglrenroadtrip.html" class="btn">Explore Now</a>
+      </div>
+
+      <div class="package-card">
+          <img src="../images/Manali to Ladakh across the Himalaya.jpeg" alt="Manali To Ladakh " class="package-image">
+          <h2 class="package-title">Manali to Ladakh across the Himalaya</h2>
+          <p class="package-description">From the hippie hill resort of Manali, it’s a two-day slog over the 3978m (13,051ft) Rohtang La to Leh, through a landscape plucked straight from the heyday of the Silk Road.</p>
+          <p class="package-price">Price: $8,000 per person</p>
+        
+          <!-- <button class="btn"> <a href="/templetes/Packages.html"></a>Explore Now</button> -->
+
+          <a href="../templetes/details_roadtrip/details_malnali_ladakhroadtrip.html" class="btn">Explore Now</a>
+      </div>
+
+      <div class="package-card">
+          <img src="../images/rajasthan_roadtrip.jpeg" alt="Rajasthan's colored cities" class="package-image">
+          <h2 class="package-title">Rajasthan's colored cities</h2>
+          <p class="package-description">Desert driving in Rajasthan is an incredible experience. Mighty fortresses loom dramatically out of the landscape, and you’ll share the dusty highways with camel carts and old-timers, some with vividly colored turbans and handsome mustaches.</p>
+          <p class="package-price">Price: $3,200 per person</p>
+        
+          <!-- <button class="btn"> <a href="/templetes/Packages.html"></a>Explore Now</button> -->
+
+          <a href="../templetes/details_roadtrip/details_rajasthancoloredcities_roadtrip.html" class="btn">Explore Now</a>
+      </div>
+
+      <div class="package-card">
+          <img src="../images/Around the tip of India.jpeg" alt="Around the tip of India" class="package-image">
+          <h2 class="package-title">Around the tip of India</h2>
+          <p class="package-description">The bottom end of India feels like a different country. Start the journey through India’s steamy south in historic Kochi, whose ancient streets tell a timeless tale of seafaring, trade and Keralan spices.</p>
+          <p class="package-price">Price: $5,200 per person</p>
+          
+          <!-- <button class="btn"> <a href="/templetes/Packages.html"></a>Explore Now</button> -->
+          
+          <a href="../templetes/details_roadtrip/details_aroundthetipofrajasthan_roadtrip.html" class="btn">Explore Now</a>
+      </div>
+
+      <div class="package-card">
+          <img src="../images/Kolkata to Darjeeling.jpeg" alt="Kolkata to Darjeeling" class="package-image">
+          <h2 class="package-title">Kolkata to Darjeeling</h2>
+          <p class="package-description">Start in crowded but cultured Kolkata, visiting ashrams, temples and striking civic buildings reclaimed from British colonialism. Fit in a tour of the tiger-stalked swamps of the Sunderbans before you head for the hills.</p>
+          <p class="package-price">Price: $1,700 per person</p>
+          <!-- <button class="btn"> <a href="/templetes/Packages.html"></a>Explore Now</button> -->
+         
+          <a href="../templetes/details_roadtrip/details_kolkata_darjalingroadtrip.html" class="btn">Explore Now</a>
+    </div>
+    <div class="package-card">
+          <img src="../images/Mumbai to Goa.jpeg" alt="Mumbai to Goa" class="package-image">
+          <h2 class="package-title">Mumbai to Goa</h2>
+          <p class="package-description">Short journeys don't mean scrimping on excitement in India. From brash and brilliant Mumbai, set out on NH66 and head south, detouring down to the coast to explore fascinating forts such as Murud-Janjira, a legacy of centuries of coastal conquest.</p>
+          <p class="package-price">Price: $800 per person</p>
+          <!-- <button class="btn">Explore Now</button> -->
+          <!-- <button class="btn"> <a href="/templetes/Packages.html"></a>Explore Now</button> -->
+
+          <a href="../templetes/details_roadtrip/details_mumbai_goaroadtrip.html" class="btn">Explore Now</a>
+    
+        </div>
+    <div class="package-card">
+          <img src="../images/A drive through the northeast.jpeg" alt="A drive through the northeast" class="package-image">
+          <h2 class="package-title">A drive through the northeast</h2>
+          <p class="package-description">Start in Guwahati, the under-explored capital of Assam, and follow the mighty Brahmaputra River northeast to Kaziranga National Park for close encounters with one-horned Indian rhinos.</p>
+          <p class="package-price">Price: $3,200 per person</p>
+          <!-- <button class="btn">Explore Now</button> -->
+          <!-- <button class="btn"> <a href="/templetes/Packages.html"></a>Explore Now</button> -->
+
+          <a href="../templetes/details_roadtrip/details_adivethrough_northeat_roadtrip.html" class="btn">Explore Now</a>
+    </div>
+
+
+      <!-- Add more cards as needed -->
+  </section>
+    </body>
+    </html>

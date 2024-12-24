@@ -252,6 +252,80 @@ body {
 .btn:hover {
     background-color: #005bb5;
 }
+footer {
+  background-color: black;
+  color: #333;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color:white;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #3498db; /* Add a hover effect */
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons a img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .footer-column {
+      margin-bottom: 20px;
+  }
+}
 
 
   </style>
@@ -315,6 +389,53 @@ body {
         </div>
         
     </div>
+    <footer>
+      <div class="footer-container">
+          <!-- Contact Us Section -->
+          <div class="footer-column">
+              <h4>Contact Us</h4>
+              <ul>
+                  <li><a href="#">Customer Support</a></li>
+                  <li><a href="#">Service Guarantee</a></li>
+                  <li><a href="#">More Service Info</a></li>
+              </ul>
+              <div class="social-icons">
+                  <a href="#"><img src="/images/facebook-512.webp" alt="Facebook"></a>
+                  <a href="#"><img src="/images/twiiter.png" alt="Twitter"></a>
+                  <a href="#"><img src="/images/whatsapp.jpg" alt="WeChat"></a>
+                  <a href="#"><img src="/images/youtube.png" alt="YouTube"></a>
+              </div>
+          </div>
+  
+          <!-- About Section -->
+          <div class="footer-column">
+              <h4>About</h4>
+              <ul>
+                  <li><a href="/templetes/about.html">About GoTrip.in</a></li>
+                  <li><a href="/templetes/news.html">News</a></li>
+                  <li><a href="/templetes/careers.html">Careers</a></li>
+                  <li><a href="/templetes/terms.html">Terms & Conditions</a></li>
+                  <li><a href="/templetes/privacy.html">Privacy Statement</a></li>
+                  <li><a href="#">Do Not Sell My Personal Information</a></li>
+                  <li><a href="/templetes/home.html">About gotrip.in Group</a></li>
+              </ul>
+          </div>
+  
+          <!-- Other Services Section -->
+          <div class="footer-column">
+              <h4>Other Services</h4>
+              <ul>
+                  <li><a href="#">Investor Relations</a></li>
+                  <li><a href="#">GoTrip.in Rewards</a></li>
+                  <li><a href="#">Affiliate Program</a></li>
+                  <li><a href="#">List Your Property</a></li>
+                  <li><a href="#">All Hotels</a></li>
+                  <li><a href="#">Become a Supplier</a></li>
+                  <li><a href="#">Security</a></li>
+              </ul>
+          </div>
+      </div>
+  </footer>
 
     <script src="script.js"></script>
 </body>

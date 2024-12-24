@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+legend {
+    font-size: 1.2em;
+    color: #666;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Travel Booking Form</h1>
+        <form id="travelForm">
+            <!-- Basic User Information -->
+            <fieldset>
+                <legend>Basic User Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="idproof">ID Proof Details:</label>
+                <input type="text" id="idproof" name="idproof" placeholder="e.g., Aadhar, Passport" required>
+            </fieldset>
+
+            <!-- Travel Details -->
+            <fieldset>
+                <legend>Travel Details</legend>
+                <label for="starting-location">Starting Location:</label>
+                <input type="text" id="starting-location" name="starting-location" required>
+                
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+                
+                <label for="travel-dates">Travel Dates:</label>
+                <input type="date" id="start-date" name="start-date" required> to 
+                <input type="date" id="end-date" name="end-date" required>
+                
+                <label for="travel-mode">Travel Mode:</label>
+                <select id="travel-mode" name="travel-mode" required>
+                    <option value="car">Car</option>
+                    <option value="flight">Flight</option>
+                    <option value="train">Train</option>
+                    <option value="ship">Ship</option>
+                </select>
+            </fieldset>
+
+            <!-- Accommodation Details -->
+            <fieldset>
+                <legend>Accommodation Details</legend>
+                <label for="hotel-name">Hotel Name:</label>
+                <input type="text" id="hotel-name" name="hotel-name" placeholder="Hotel Name" required>
+                
+                <label for="hotel-address">Hotel Address:</label>
+                <input type="text" id="hotel-address" name="hotel-address" placeholder="Hotel Address" required>
+                
+                <label for="check-in-date">Check-in Date:</label>
+                <input type="date" id="check-in-date" name="check-in-date" required>
+                
+                <label for="check-out-date">Check-out Date:</label>
+                <input type="date" id="check-out-date" name="check-out-date" required>
+                
+                <label for="room-type">Room Type:</label>
+                <input type="text" id="room-type" name="room-type" placeholder="Single, Double, Suite" required>
+                
+                <label for="amenities">Amenities:</label>
+                <div>
+                    <input type="checkbox" id="wifi" name="amenities" value="Wi-Fi">
+                    <label for="wifi">Wi-Fi</label>
+                    
+                    <input type="checkbox" id="parking" name="amenities" value="Parking">
+                    <label for="parking">Parking</label>
+                    
+                    <input type="checkbox" id="pool" name="amenities" value="Swimming Pool">
+                    <label for="pool">Swimming Pool</label>
+                </div>
+            </fieldset>
+
+            <!-- Food Preferences -->
+            <fieldset>
+                <legend>Food Preferences</legend>
+                <label for="meal-plan">Meal Plan:</label>
+                <select id="meal-plan" name="meal-plan" required>
+                    <option value="breakfast">Only Breakfast</option>
+                    <option value="half-board">Breakfast and Dinner</option>
+                    <option value="full-board">All Meals</option>
+                </select>
+            </fieldset>
+
+            <!-- Submit -->
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+</body>
+</html>
